@@ -1,24 +1,62 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using DecaPlayStore.Core.Domains;
+using DecaPlayStore.Data;
+using DecaPlayStore.Data.IServices;
+using Microsoft.AspNetCore.Mvc;
+using System.Linq;
+using System.Threading.Tasks;
 using System.Web;
 
 namespace DecaPlayStore.Controllers
 {
     public class StoreController : Controller
     {
-        //
-        //GET: /Store/
-        public string Index()
+        private readonly IGenreService _genreService;
+        private readonly IAlbumService _albumService;
+        public StoreController(IGenreService genreService, IAlbumService albumService)
         {
-            return "Hello from store.Indedx() ";
+            _genreService = genreService;
+            _albumService = albumService;
+        }
+        //GET: /Store/
+        public async Task<IActionResult> Index()
+        {
+            try
+            {
+                var genre =  await  _genreService.GetAllGenreAsnyc();
+                return View(genre);
+            }
+            catch (System.Exception)
+            {
+
+                throw;
+            }
+           
+           
         }
 
 
         //
         //GET: /Store/Browse?genre=Disco
-        public string Browse(string genre)
+        public async Task<ActionResult> Browse(string genre)
         {
-            string message = HttpUtility.HtmlEncode("Store.Browse, Genere = " + genre);
-            return message;
+
+            try
+            {
+                var genreModel = await _genreService.GetByNameAsync(genre);
+                //.Single(g => g.Name == genre);
+                return View(genreModel);
+            }
+            catch (System.Exception)
+            {
+
+                throw;
+            }
+        }
+
+        public IActionResult Details(int id)
+        {
+            var album = new Album { Title = "Common Person " + id };
+            return View(album);
         }
     }
 }

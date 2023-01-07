@@ -1,0 +1,25 @@
+﻿@model DecaPlayStore.Core.Domains.Genre
+
+@{
+    ViewData["Title"] = "Browse";
+}
+
+
+<div class="entry">
+    <h1>Browse</h1>
+
+    <h4>Genre</h4>
+    <hr />
+    <ul>
+      @foreach (var album in Model.Albums)
+        {
+           <li>
+               @album.Title;
+           </li>
+        }
+    </ul>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.GenreId">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

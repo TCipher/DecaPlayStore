@@ -1,0 +1,21 @@
+﻿@model IEnumerable<DecaPlayStore.Core.Domains.Genre>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<div class="entry">
+<h3>Browse Genre</h3>
+
+<p>
+   Select from @Model.Count() genre:
+</p>
+<ul>
+@foreach (var item in Model) {
+            @*<li class="text-success">@item.Name</li>*@
+    <li>
+        <a asp-action="Browse" asp-route-genre="@item.Name">@item.Name</a>
+    </li>
+}
+   </ul>
+</div>

@@ -12,7 +12,7 @@
 *,
 *:before,
 *:after {
-    -moz-box-sizing: border-box;
+    list-inline-item -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
     -ms-box-sizing: border-box;
     -o-box-sizing: border-box;
@@ -691,4 +691,7 @@ div[class*="col-"].gap-double-sm, .gap-double-sm {
     background: #13181d;
 }
 
+.entry {
+    margin-top: 100px;
+}
 /*End misc */

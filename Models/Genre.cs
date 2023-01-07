@@ -16,7 +16,7 @@ namespace DecaPlayStore.Core.Domains
         public string Name { get; set; }
         [Display(Name = "Description")]
         [Required(ErrorMessage = "Description  is Required")]
-        public string Desc { get; set; }
+        public string Description { get; set; }
         public ICollection<Album> Albums { get; set; }
 
     }

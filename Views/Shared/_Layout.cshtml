@@ -4,162 +4,49 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - DecaPlay Store</title>
-    <link rel="stylesheet" href="~/css/BootWatchThemes.css" />
+    <link rel="stylesheet" href="~/css/bootstrap.css" media="all" />
     @*<link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />*@
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.1/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    @*<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.1/font/bootstrap-icons.css">*@
+    <link rel="stylesheet" href="~/css/base.css" asp-append-version="true" media="all" />
+    <link rel="stylesheet" href="~/css/main.css" asp-append-version="true" media="all" />
+    <link rel="stylesheet" href="~/css/flexslider.css" asp-append-version="true" media="all" />
+    <link rel="stylesheet" href="~/css/magnific-popup.css" asp-append-version="true" media="all" />
+    <link rel="stylesheet" href="~/css/fonts.css" asp-append-version="true" media="all" />
     <link rel="stylesheet" href="~/DecaPlayStore.styles.css" asp-append-version="true" />
+    <link href="http://fonts.googleapis.com/css?family=Dosis:100,300,400,600,700" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300i,300,400,400i,600,700,800" rel="stylesheet">
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
 </head>
 <body>
-    <header>
-        <!-- Preloader -->
-        <div class="loader">
-            <!-- Preloader inner -->
-            <div class="loader-inner">
-                <svg width="120" height="220" viewbox="0 0 100 100" class="loading-spinner" version="1.1" xmlns="http://www.w3.org/2000/svg">
-                    <circle class="spinner" cx="50" cy="50" r="21" fill="#13181d" stroke-width="2" />
-                </svg>
+   
+        <!--Header-->
+        <header class="header default">
+            <div class=" left-part">
+                <a class="logo scroll" href="#wrapper">
+                <h2 class="mb-0 uppercase text-success">DecaPlay Store</h2>
+                </a>
             </div>
-            <!-- End preloader inner -->
-        </div>
-        <!-- End preloader-->
-        <!--Wrapper-->
-        <div class="wrapper">
-            <div class="block-search-form">
-                <div class="block-content">
-                    <div class="container">
-                        <!--end of row-->
-                        <div class="row justify-content-center">
-                            <div class="col-12 col-md-10 col-lg-8">
-                                <form method="get">
-                                    <div class="card  bg-red ">
-                                        <div class="card-body  row no-gutters align-items-center">
-                                            <div class="col-auto">
-                                                <i class="icon-search"></i>
-                                            </div>
-                                            <!--end of col-->
-                                            <div class="col">
-                                                <input class="form-control form-control-lg form-control-border0" placeholder="Type a keywords..." type="search">
-                                            </div>
-                                            <!--end of col-->
-                                            <div class="col-auto">
-                                                <button type="submit" class="btn  btn-primary uppercase border-3">
-                                                    Search now
-                                                </button>
-                                            </div>
-                                            <!--end of col-->
-                                        </div>
-                                    </div>
-                                </form>
-                            </div>
-                            <!--end of col-->
-                        </div>
-                        <!--end of row-->
-                    </div>
-                </div>
-            </div>
-            <!--Hero section-->
-            <section class="hero">
-                <!--Main slider-->
-                <div class="main-slider slider flexslider">
-                    <ul class="slides">
-                        <li>
-                            <div class="background-img overlay zoom">
-                                <img src="img/1.jpg" alt="">
-                            </div>
-                            <!--Container-->
-                            <div class="container hero-content">
-                                <!--Row-->
-                                <div class="row">
-                                    <div class="col-sm-12 text-center">
-                                        <!--Inner hero-->
-                                        <div class="inner-hero">
-                                            <div class="back-rect"></div>
-                                            <h1 class="large text-white uppercase mb-0">welcome to mousiqua</h1>
-                                            <h5 class="mb-0 text-white uppercase">Music Band and Musician Bootstrap Template</h5>
-                                            <div class="front-rect"></div>
-                                        </div>
-                                    </div>
-                                    <!--End row-->
-                                </div>
-                                <!--End container-->
-                            </div>
-                            <!--End inner hero-->
-                        </li>
-                        <li>
-                            <div class="background-img overlay zoom">
-                                <img src="img/2.jpg" alt="">
-                            </div>
-                            <!--Container-->
-                            <div class="container hero-content">
-                                <!--Row-->
-                                <div class="row">
-                                    <div class="col-sm-12 text-center">
-                                        <!--Inner hero-->
-                                        <div class="inner-hero">
-                                            <h1 class="large text-white uppercase mb-0">limitless</h1>
-                                            <h5 class="mb-0 text-white uppercase">New Album Available Everywhere</h5>
-                                            <a class="video-play-but popup-youtube" href="https://www.youtube.com/watch?v=Gc2en3nHxA4"></a>
-                                        </div>
-                                    </div>
-                                    <!--End row-->
-                                </div>
-                                <!--End container-->
-                            </div>
-                            <!--End inner hero-->
-                        </li>
-                    </ul>
-                </div>
-                <!--End main slider-->
-                <!--Header-->
-                <header class="header default">
-                    <div class=" left-part">
-                        <a class="logo scroll" href="#wrapper">
-                            <h2 class="mb-0 uppercase">mousiqua.</h2>
+            <div class="right-part">
+                <nav class="main-nav">
+                    <div class="toggle-mobile-but">
+                        <a href="#" class="mobile-but">
+                            <div class="lines"></div>
                         </a>
                     </div>
-                    <div class="right-part">
-                        <nav class="main-nav">
-                            <div class="toggle-mobile-but">
-                                <a href="#" class="mobile-but">
-                                    <div class="lines"></div>
-                                </a>
-                            </div>
-                            <ul class="main-menu list-inline">
-                                <li><a class="scroll list-inline-item" href="#wrapper">Home</a></li>
-                                <li><a class="scroll list-inline-item" href="#about">about</a></li>
-                                <li><a class="scroll list-inline-item" href="#discography">discography</a></li>
-                                <li><a class="scroll list-inline-item" href="#band">Band</a></li>
-                                <li class="dropdown">
-                                    <a class="scroll list-inline-item" href="#tour">Tours</a>
-
-
-                                </li>
-
-
-                                <li><a class="scroll list-inline-item" href="#gallery">Gallery</a></li>
-                                <li>
-                                    <a class="scroll list-inline-item " href="#news">News</a>
-
-
-
-                                </li>
-                                <li><a class="scroll list-inline-item" href="#contact">Contact</a></li>
-
-                                <li class="block-helper">
-                                    <a href="#album" class="scroll"><span><i class="icon-cd-2"></i></span></a>
-                                </li>
-                                <li class="block-helper">
-                                    <span class="icon search-ico"><i class="icon-search"></i></span>
-                                </li>
-                            </ul>
-                        </nav>
-                    </div>
-                </header>
-    </header>
-    <div class="container">
+                    <ul class="main-menu list-inline">
+                        <li>
+                        <a class="scroll list-inline-item text-success" asp-controller="Home" asp-action="index"><i class="bi bi-house-fill"></i>Home</a>
+                        </li>
+                        <li>
+                        <a class="scroll list-inline-item text-success" asp-controller="Store" asp-action="index"><i class="bi bi-shop-window"></i>Store</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+   
+    <div class="container-fluid">
         <main role="main" class="pb-3">
             @RenderBody()
         </main>
@@ -171,6 +58,13 @@
         </div>
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/jquery/dist/jquery.flexslider-min.js"></script>
+    <script src="~/js/smoth-scroll.js" asp-append-version="true"></script>
+    <script src="~/lib/jquery/dist/jquery.magnific-popup.min.js"></script>
+    <script src="~/js/audio.min.js" asp-append-version="true"></script>
+    <script src="~/lib/jquery/dist/jquery.countdown.min.js"></script>
+    <script src="~/js/placeholder.min.js"></script>
+    <script src="~/js/script.js"></script>
     @*<script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>*@
     <script src="~/js/site.js" asp-append-version="true"></script>
     @await RenderSectionAsync("Scripts", required: false)
